@@ -1,0 +1,126 @@
+/*   GENEL SAYFA   */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f2f2f2; /* sayfa gri */
+  color: #333;               /* metin koyu gri */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/*    HEADER   */
+header {
+  background-color: #f2f2f2;  /* header gri */
+  color: #6a1b4d;             /* isim ve unvan bordo-mürdüm */
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1, header p {
+  margin: 0;                     /* dış boşluk */
+  color: #6a1b4d;
+}
+
+/*   NAV   */
+nav {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 15px 0;
+}
+
+nav a {
+  color: #6a1b4d;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/*   SECTION - BÖLÜM STİLLERİ   */
+section {
+  background-color: #f2f2f2;   /* Sayfa arka planıyla uyumlu */
+  margin: 20px auto;            /* Üst-alt boşluk, ortalanmış */
+  padding: 25px 30px;           /* İç boşluk, metinler kenara yapışmasın */
+  max-width: 900px;             /* Büyük ekranlarda çok geniş olmasın */
+  border-radius: 10px;          /* Köşeler hafif yuvarlak */
+  box-sizing: border-box;       /* Padding ve border toplam genişliği bozmasın */
+  border-left: 5px solid #6a1b4d; /* Bordo-mürdüm vurgu çizgisi */
+}
+
+/*   BAŞLIKLAR   */
+h2 {
+  color: #6a1b4d;               /* Başlık bordo-mürdüm */
+  font-size: 1.8em;             /* Büyük ve okunaklı */
+  margin-bottom: 15px;
+  border-bottom: 2px solid #d8bfd8; /* İnce alt çizgi ile vurgu */
+  padding-bottom: 5px;
+}
+
+/*   METİNLER   */
+p, li {
+  color: #333;                  /* Koyu gri metin */
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;         /* Nokta kaldır */
+  padding-left: 0;
+}
+
+ul li::before {
+  content: "• ";                 /* Bordo nokta */
+  color: #6a1b4d;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/*   İLETİŞİM LİNKLERİ   */
+#iletisim a {
+  color: #6a1b4d;               /* Normal durumda mürdüm */
+  text-decoration: underline;    /* Alt çizgi her zaman */
+  transition: color 0.3s ease;   /* Hover için geçiş */
+}
+
+#iletisim a:hover {
+  color: #9b3a5e;               /* Hover’da açık mürdüm */
+}
+
+/*   PROJE LİNKLERİ   */
+#projeler a {
+  color: #6a1b4d;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#projeler a:hover {
+  color: #9b3a5e;              /* Hover’da daha açık bordo-mürdüm */
+  transform: translateX(5px);    /* Hafif sağa kayma efekti */
+}
+
+/*   RESPONSIVE (MOBİL)   */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  section {
+    padding: 15px 20px;
+    margin: 15px 10px;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  p, li {
+    font-size: 14px;
+  }
+}
